@@ -190,4 +190,14 @@ public class PentominoManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level_2");
     }
+
+    public void Reset()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+    public void Exit() 
+    {
+        Application.Quit();
+    }
 }
