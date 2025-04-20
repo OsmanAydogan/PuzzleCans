@@ -5,6 +5,8 @@ PuzzleCAns, artırılmış gerçeklik (AR) teknolojisi kullanarak kullanıcılar
 
 **Site Linki:** [PuzzleCAns Web Sitesi](https://osmanaydogan.github.io/PuzzleCans_Websitesi/)  
 **Trello Linki:** [Trello Yönetim Paneli](https://trello.com/b/C54NNLKv/proje)
+**Trello Linki:** [Trello Yönetim Paneli](https://drive.google.com/file/d/1bWPpJ5TcwNgr5CUk9maGI0YG62K5A7CO/view?usp=sharing)
+ 
 
 ---
 
