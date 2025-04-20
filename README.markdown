@@ -3,7 +3,7 @@
 ## 📖 Proje Özeti
 PuzzleCAns, artırılmış gerçeklik (AR) teknolojisi kullanarak kullanıcıların gerçek dünya ortamında 3D bulmacalarla etkileşim kurmasını sağlayan bir mobil uygulamadır. Kullanıcılar, sanal parçaları manipüle ederek zorlu bulmacaları çözebilir, puan kazanabilir ve oyun içi özelliklerin kilidini açabilir.
 
-**Site Linki:** [PuzzleCAns Web Sitesi](https://emirhanync.github.io/PentoARFinal/)  
+**Site Linki:** [PuzzleCAns Web Sitesi](https://.github.io/PentoARFinal/)  
 **Trello Linki:** [Trello Yönetim Paneli](https://trello.com/b/9XInHVP4/pentomino-ar)
 
 ---
