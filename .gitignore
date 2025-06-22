@@ -7,6 +7,7 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Mm]emoryCaptures/
+/[Vv][Ss]/
 
 # Visual Studio / Rider çözüm ve proje dosyaları
 *.sln
@@ -28,9 +29,4 @@
 *.mdb.meta
 
 # Unity3D Kilitlenme Raporları
-sysinfo.txt
-
-# Build sonuçları (APK hariç)
-*.apk
-*.aab
-!/apk/ 
+sysinfo.txt 
