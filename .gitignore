@@ -1,0 +1,36 @@
+# Unity Editor tarafından oluşturulan ve göz ardı edilmesi gereken dosyalar
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Visual Studio / Rider çözüm ve proje dosyaları
+*.sln
+*.csproj
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Unity3D tarafından oluşturulan meta dosyaları
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D Kilitlenme Raporları
+sysinfo.txt
+
+# Build sonuçları (APK hariç)
+*.apk
+*.aab
+!/apk/ 

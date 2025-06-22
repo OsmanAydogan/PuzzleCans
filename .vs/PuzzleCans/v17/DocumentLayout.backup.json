@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|c:\\users\\kharenium\\desktop\\puzzlecans\\assets\\scripts\\puzzlecubemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzlecubemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\assets\\scripts\\pentominomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pentominomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|c:\\users\\kharenium\\desktop\\puzzlecans\\assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED1A9E4-FA05-9D51-AF28-06F3AC72007F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PuzzleCubeManager.cs",
+              "DocumentMoniker": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\PuzzleCubeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PuzzleCubeManager.cs",
+              "ToolTip": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\PuzzleCubeManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PuzzleCubeManager.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T13:05:31.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelManager.cs",
+              "ToolTip": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\LevelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelManager.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwBsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:46:47.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PentominoManager.cs",
+              "DocumentMoniker": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\PentominoManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PentominoManager.cs",
+              "ToolTip": "C:\\Users\\KHARENIUM\\Desktop\\PuzzleCans\\Assets\\Scripts\\PentominoManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PentominoManager.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAmwMsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:46:00.573Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

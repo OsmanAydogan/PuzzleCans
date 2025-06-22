@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,6 +33,7 @@ public class PentominoManager : MonoBehaviour
     private bool isDragging = false;
     private Collider puzzlePlaceCollider;
     private Vector3 offset;
+    private bool isChecking = false;
 
     void Start()
     {
@@ -54,6 +56,8 @@ public class PentominoManager : MonoBehaviour
 
     void Update()
     {
+        if (isChecking) return;
+
         if (Input.GetMouseButtonDown(0) && activeBlock != null)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -82,7 +86,6 @@ public class PentominoManager : MonoBehaviour
             isDragging = false;
             if (activeBlock != null)
             {
-                ReturnToStartPosition();
                 CheckForAnswer();
             }
         }
@@ -135,36 +138,83 @@ public class PentominoManager : MonoBehaviour
             string targetTag = activeBlock.name + "_Target";
             if (hit.transform.CompareTag(targetTag))
             {
-                int blockIndex = System.Array.IndexOf(answerBlocks, activeBlock);
-
-                if (blockIndex >= 0 && blockIndex < sceneBlocks.Length)
-                {
-                    sceneBlocks[blockIndex].SetActive(false);
-                    activeBlock.SetActive(false);
-
-                    if (blockIndex + 1 < answerBlocks.Length)
-                    {
-                        answerBlocks[blockIndex + 1].SetActive(true);
-                        UpdateActiveBlock();
-                    }
-
-                    resultText.text = "DOÐRU CEVAP!";
-                    ConfettiEffects.Play();
-                    playerPoint += 20;
-                    PlayerPrefs.SetInt("PlayerPoint", playerPoint);
-                    playerPointText.text = "PUAN: " + playerPoint.ToString();
-
-                    if (AllBlocksCompleted())
-                    {
-                        CompletePuzzle();
-                    }
-                }
-            }
-            else
-            {
-                resultText.text = "YANLIÞ CEVAP!";
+                StartCoroutine(SettlePieceCoroutine(activeBlock, hit.transform));
+                return;
             }
         }
+
+        resultText.text = "YANLIÅž CEVAP!";
+        ReturnToStartPosition();
+    }
+
+    IEnumerator SettlePieceCoroutine(GameObject piece, Transform target)
+    {
+        isChecking = true;
+        activeBlock = null;
+
+        Vector3 startPos = piece.transform.position;
+        Vector3 targetPos = target.position;
+        targetPos.z = startPos.z;
+
+        float moveDuration = 0.15f;
+        float timer = 0f;
+
+        while (timer < moveDuration)
+        {
+            float t = timer / moveDuration;
+            piece.transform.position = Vector3.Lerp(startPos, targetPos, t * t);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        piece.transform.position = targetPos;
+        
+        float popDuration = 0.1f;
+        Vector3 originalScale = piece.transform.localScale;
+        Vector3 popScale = originalScale * 1.1f;
+        
+        timer = 0f;
+        while(timer < popDuration)
+        {
+            piece.transform.localScale = Vector3.Lerp(originalScale, popScale, timer / popDuration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        
+        timer = 0f;
+        while(timer < popDuration)
+        {
+            piece.transform.localScale = Vector3.Lerp(popScale, originalScale, timer / popDuration);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        piece.transform.localScale = originalScale;
+        
+        int blockIndex = System.Array.IndexOf(answerBlocks, piece);
+
+        if (blockIndex >= 0 && blockIndex < sceneBlocks.Length)
+        {
+            sceneBlocks[blockIndex].SetActive(false);
+            piece.SetActive(false);
+
+            if (blockIndex + 1 < answerBlocks.Length)
+            {
+                answerBlocks[blockIndex + 1].SetActive(true);
+                UpdateActiveBlock();
+            }
+
+            resultText.text = "DOÄžRU CEVAP!";
+            ConfettiEffects.Play();
+            playerPoint += 20;
+            PlayerPrefs.SetInt("PlayerPoint", playerPoint);
+            playerPointText.text = "PUAN: " + playerPoint.ToString();
+
+            if (AllBlocksCompleted())
+            {
+                CompletePuzzle();
+            }
+        }
+        
+        isChecking = false;
     }
 
     bool AllBlocksCompleted()
@@ -181,7 +231,7 @@ public class PentominoManager : MonoBehaviour
 
     void CompletePuzzle()
     {
-        resultText.text = "TÜM BLOKLAR TAMAMLANDI!";
+        resultText.text = "TÃœM BLOKLAR TAMAMLANDI!";
         completeScreen.SetActive(true);
         ConfettiEffects.Play();
     }
